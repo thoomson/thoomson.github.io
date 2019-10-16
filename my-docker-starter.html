@@ -22,18 +22,28 @@
 
 
 
-    <meta name="author" content="thoomson" />
-    <meta name="description" content="" />
+<meta name="author" content="thoomson" />
+<meta name="description" content="My docker starter from Github" />
+<meta name="keywords" content="docker, dockerfile, nginx, ssh, openssh">
+
 <meta property="og:site_name" content="Thoomson's blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Thoomson's blog"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="My Docker Starter"/>
+<meta property="og:description" content="My docker starter from Github"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://thoomson.github.io"/>
+<meta property="og:url" content="https://thoomson.github.io/my-docker-starter.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-10-16 10:00:00+02:00"/>
+<meta property="article:modified_time" content="2019-10-16 10:00:00+02:00"/>
+<meta property="article:author" content="https://thoomson.github.io/author/thoomson.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="docker"/>
+<meta property="article:tag" content="dockerfile"/>
+<meta property="article:tag" content="nginx"/>
+<meta property="article:tag" content="ssh"/>
+<meta property="article:tag" content="openssh"/>
 <meta property="og:image" content="https://pbs.twimg.com/profile_images/975400664619732993/MCYUXKnW_400x400.jpg">
 
-  <title>Thoomson's blog &ndash;     Authors
-</title>
+  <title>Thoomson's blog &ndash; My Docker Starter</title>
 
 </head>
 <body>
@@ -80,14 +90,71 @@
 
 <article class="single">
   <header>
-    <h1>    Authors
-</h1>
+      
+    <h1 id="my-docker-starter">My Docker Starter</h1>
+    <p>
+          Posted on Wed 16 October 2019 in <a href="https://thoomson.github.io/category/devops.html">DevOps</a>
+
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li><a href="https://thoomson.github.io/author/thoomson.html">thoomson</a> (3)</li>
-    </ul>
+    <p>Files and last updates : https://github.com/thoomson/MyDockerStarter</p>
+<p>Just a Dockerfile to deploy an nginx container.</p>
+<p>This Dockerfile can be used in combination with my Vagrantfile : https://github.com/thoomson/MyVagrantEnv</p>
+<h2>How to use it</h2>
+<ol>
+<li>
+<p>Install Docker (or use my Vagrantfile) : https://docs.docker.com/install/</p>
+</li>
+<li>
+<p>Get the Dockerfile (with curl : <code>curl https://raw.githubusercontent.com/thoomson/MyDockerStarter/master/Dockerfile &gt; Dockerfile</code>)</p>
+</li>
+<li>
+<p>Build the container : sudo docker build -t my-container .</p>
+</li>
+<li>
+<p>Start the container : sudo docker run -d -p 8080:80 -p 2222:22 my-container</p>
+</li>
+<li>
+<p>Have fun !</p>
+</li>
+</ol>
+<h2>Contributing</h2>
+<ol>
+<li>
+<p>Fork it</p>
+</li>
+<li>
+<p>Create your feature branch (<code>git checkout -b my-new-feature</code>)</p>
+</li>
+<li>
+<p>Commit your changes (<code>git commit -am 'Add some feature'</code>)</p>
+</li>
+<li>
+<p>Push to the branch (<code>git push origin my-new-feature</code>)</p>
+</li>
+<li>
+<p>Create new Pull Request</p>
+</li>
+</ol>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://thoomson.github.io/tag/docker.html">docker</a>
+      <a href="https://thoomson.github.io/tag/dockerfile.html">dockerfile</a>
+      <a href="https://thoomson.github.io/tag/nginx.html">nginx</a>
+      <a href="https://thoomson.github.io/tag/ssh.html">ssh</a>
+      <a href="https://thoomson.github.io/tag/openssh.html">openssh</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
 
     <footer>

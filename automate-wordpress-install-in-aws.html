@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://thoomson.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://thoomson.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://thoomson.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://thoomson.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Thoomson's blog Atom">
+
+
+
+
+
+<meta name="author" content="thoomson" />
+<meta name="description" content="My Python script to automatically install Wordpress in an AWS EC2 instance from Github" />
+<meta name="keywords" content="python, wordpress, aws, ec2, script, debian">
+
+<meta property="og:site_name" content="Thoomson's blog"/>
+<meta property="og:title" content="Automate WordPress install in AWS"/>
+<meta property="og:description" content="My Python script to automatically install Wordpress in an AWS EC2 instance from Github"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://thoomson.github.io/automate-wordpress-install-in-aws.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-09-10 15:00:00+02:00"/>
+<meta property="article:modified_time" content="2019-09-10 15:00:00+02:00"/>
+<meta property="article:author" content="https://thoomson.github.io/author/thoomson.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="wordpress"/>
+<meta property="article:tag" content="aws"/>
+<meta property="article:tag" content="ec2"/>
+<meta property="article:tag" content="script"/>
+<meta property="article:tag" content="debian"/>
+<meta property="og:image" content="https://pbs.twimg.com/profile_images/975400664619732993/MCYUXKnW_400x400.jpg">
+
+  <title>Thoomson's blog &ndash; Automate WordPress install in AWS</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://thoomson.github.io">
+        <img src="https://pbs.twimg.com/profile_images/975400664619732993/MCYUXKnW_400x400.jpg" alt="Thoomson's blog" title="Thoomson's blog">
+      </a>
+      <h1><a href="https://thoomson.github.io">Thoomson's blog</a></h1>
+
+<p>DevOps</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/thomsoneuh" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/thoomson" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://thoomson.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://thoomson.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="automate-wordpress-install-in-aws">Automate WordPress install in AWS</h1>
+    <p>
+          Posted on Tue 10 September 2019 in <a href="https://thoomson.github.io/category/devops.html">DevOps</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Files and last updates : https://github.com/thoomson/AutoInstallWPinAWS</p>
+<p>Python script to automatically install Wordpress in an AWS EC2 instance
+This script has only be tested on <strong>Debian 9</strong> and <strong>Windows 10</strong> ! Be carrefull when use it on others systems.</p>
+<h2>Prepare your setup</h2>
+<p>To use this script you need to install Python3 and pip3.
+* On debian/ubuntu : <code>apt-get install python3 pip3</code>
+* On centos : <code>yum install python3 pip3</code>
+* On Windows : install the last 3.X version on : https://www.python.org/downloads/</p>
+<p>In the installation, be carrefull to select the option <code>Add Python to environnment variables</code></p>
+<p><img alt="Python_Install" src="https://i.imgur.com/TMMV3nE.png"></p>
+<p>After install Python3 and pip3, please install theses librairies : <code>boto3</code>, <code>paramiko</code> and <code>requests</code>. (<code>pip3 install boto3 paramiko requests</code> on your command line)</p>
+<h2>AWS Preparation</h2>
+<p>To use this script, you need (obviously) an Amazon AWS account.</p>
+<p>Then, you have to create a key pair. Keep it name in mind. You'll need it in to run the program. (How to create a key pair on EC2 : (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) </p>
+<p>After that, you'll need to create a User and get AWS Access ID and Secret Key.
+To do that :</p>
+<ol>
+<li>
+<p>Launch the Identity and Access Management console (IAM) in AWS. </p>
+</li>
+<li>
+<p>Click Users on the navigation menu on the left of the screen. </p>
+</li>
+<li>
+<p>In the popup window, click on Add User. </p>
+</li>
+</ol>
+<p><img alt="ipswitch.com" src="https://blog.ipswitch.com/hs-fs/hubfs/prateek-add-user-aws-iam.png?t=1543273056029&amp;width=847&amp;name=prateek-add-user-aws-iam.png"></p>
+<ol>
+<li>In the new window, provide a user name and choose the 'Programmatic Access' access type, then click next. </li>
+</ol>
+<p><img alt="ipswitch.com" src="https://blog.ipswitch.com/hs-fs/hubfs/prateek-add-user-aws-iam-2.png?t=1543273056029&amp;width=831&amp;name=prateek-add-user-aws-iam-2.png"></p>
+<ol>
+<li>To set the permissions, choose 'Attach Existing Policies Directly' and in the Policy Filter type 'AmazonEC2FullAccess', you can choose any permission level, but in this example I'll click on the checkbox next to 'AmazonEC2FullAccess'. Then repeat this step with 'AmazonSNSFullAccess' and then click the 'next' button. </li>
+</ol>
+<p><img alt="ipswitch.com" src="https://blog.ipswitch.com/hs-fs/hubfs/prateek-add-user-aws-iam-3.png?t=1543273056029&amp;width=972&amp;name=prateek-add-user-aws-iam-3.png"></p>
+<ol>
+<li>
+<p>Finally, review the user and permission levels, and click on the 'Create User' button. </p>
+</li>
+<li>
+<p>The next page will show your keys, as shown below. These are only available once, so it its a good idea to download and save then safely in a secure location. </p>
+</li>
+</ol>
+<p><img alt="ipswitch.com" src="https://blog.ipswitch.com/hs-fs/hubfs/prateek-add-user-aws-iam-4.png?t=1543273056029&amp;width=985&amp;name=prateek-add-user-aws-iam-4.png"></p>
+<p>(credits to https://blog.ipswitch.com/how-to-create-an-ec2-instance-with-python for this tutorial and pictures)</p>
+<h2>Run the script</h2>
+<p>When that was done, you have to edit the script <code>variables.py</code> with your own informations.</p>
+<p>Finally you can run the script by using : <code>python3 program.py</code> or <code>python program.py</code> in Windows.</p>
+<h2>Informations</h2>
+<p>This script will create Amazon EC2 instance(s). Be carrefull, it can cost you money !</p>
+<h2>Contributing</h2>
+<ol>
+<li>
+<p>Fork it</p>
+</li>
+<li>
+<p>Create your feature branch (<code>git checkout -b my-new-feature</code>)</p>
+</li>
+<li>
+<p>Commit your changes (<code>git commit -am 'Add some feature'</code>)</p>
+</li>
+<li>
+<p>Push to the branch (<code>git push origin my-new-feature</code>)</p>
+</li>
+<li>
+<p>Create new Pull Request</p>
+</li>
+</ol>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://thoomson.github.io/tag/python.html">python</a>
+      <a href="https://thoomson.github.io/tag/wordpress.html">wordpress</a>
+      <a href="https://thoomson.github.io/tag/aws.html">aws</a>
+      <a href="https://thoomson.github.io/tag/ec2.html">ec2</a>
+      <a href="https://thoomson.github.io/tag/script.html">script</a>
+      <a href="https://thoomson.github.io/tag/debian.html">debian</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; thoomson 2019 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Thoomson's blog ",
+  "url" : "https://thoomson.github.io",
+  "image": "https://pbs.twimg.com/profile_images/975400664619732993/MCYUXKnW_400x400.jpg",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
