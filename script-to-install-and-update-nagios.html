@@ -22,18 +22,28 @@
 
 
 
-    <meta name="author" content="thoomson" />
-    <meta name="description" content="" />
+<meta name="author" content="thoomson" />
+<meta name="description" content="My Python script to install or update Nagios on Debian 9" />
+<meta name="keywords" content="python, script, monitoring, nagios, debian">
+
 <meta property="og:site_name" content="Thoomson's blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Thoomson's blog"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="Script to install and update Nagios"/>
+<meta property="og:description" content="My Python script to install or update Nagios on Debian 9"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://thoomson.github.io"/>
+<meta property="og:url" content="https://thoomson.github.io/script-to-install-and-update-nagios.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-11-30 20:00:00+01:00"/>
+<meta property="article:modified_time" content="2018-11-30 20:30:00+01:00"/>
+<meta property="article:author" content="https://thoomson.github.io/author/thoomson.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="script"/>
+<meta property="article:tag" content="monitoring"/>
+<meta property="article:tag" content="nagios"/>
+<meta property="article:tag" content="debian"/>
 <meta property="og:image" content="https://avatars1.githubusercontent.com/u/19496643?s=400&u=3bc0e0d53c72a1115ec1b897aeafee2fa70a6608&v=4">
 
-  <title>Thoomson's blog &ndash;     Tag debian
-</title>
+  <title>Thoomson's blog &ndash; Script to install and update Nagios</title>
 
 </head>
 <body>
@@ -78,73 +88,66 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://thoomson.github.io/my-vagrant-env.html#my-vagrant-env">My Vagrant Env</a></h2>
-    <p>
-          Posted on Wed 16 October 2019 in <a href="https://thoomson.github.io/category/devops.html">DevOps</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="https://thoomson.github.io/tag/vagrant.html">vagrant</a>,              <a href="https://thoomson.github.io/tag/docker.html">docker</a>,              <a href="https://thoomson.github.io/tag/debian.html">debian</a>
-    </p>
-  </header>
-  <div>
-      <p>My vagrant starter from Github</p>
-      <br>
-      <a class="btn" href="https://thoomson.github.io/my-vagrant-env.html#my-vagrant-env">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://thoomson.github.io/automate-wordpress-install-in-aws.html#automate-wordpress-install-in-aws">Automate WordPress install in AWS</a></h2>
-    <p>
-          Posted on Tue 10 September 2019 in <a href="https://thoomson.github.io/category/devops.html">DevOps</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="https://thoomson.github.io/tag/python.html">python</a>,              <a href="https://thoomson.github.io/tag/wordpress.html">wordpress</a>,              <a href="https://thoomson.github.io/tag/aws.html">aws</a>,              <a href="https://thoomson.github.io/tag/ec2.html">ec2</a>,              <a href="https://thoomson.github.io/tag/script.html">script</a>,              <a href="https://thoomson.github.io/tag/debian.html">debian</a>
-    </p>
-  </header>
-  <div>
-      <p>My Python script to automatically install Wordpress in an AWS EC2 instance from Github</p>
-      <br>
-      <a class="btn" href="https://thoomson.github.io/automate-wordpress-install-in-aws.html#automate-wordpress-install-in-aws">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://thoomson.github.io/script-to-install-and-update-nagios.html#script-to-install-and-update-nagios">Script to install and update Nagios</a></h2>
+      
+    <h1 id="script-to-install-and-update-nagios">Script to install and update Nagios</h1>
     <p>
           Posted on Fri 30 November 2018 in <a href="https://thoomson.github.io/category/devops.html">DevOps</a>
 
 
-          &#8226;     Tagged with
-
-              <a href="https://thoomson.github.io/tag/python.html">python</a>,              <a href="https://thoomson.github.io/tag/script.html">script</a>,              <a href="https://thoomson.github.io/tag/monitoring.html">monitoring</a>,              <a href="https://thoomson.github.io/tag/nagios.html">nagios</a>,              <a href="https://thoomson.github.io/tag/debian.html">debian</a>
     </p>
   </header>
+
+
   <div>
-      <p>My Python script to install or update Nagios on Debian 9</p>
-      <br>
-      <a class="btn" href="https://thoomson.github.io/script-to-install-and-update-nagios.html#script-to-install-and-update-nagios">    Continue reading
-</a>
+    <p>Files and last updates : https://github.com/thoomson/InstallUpdateNagios</p>
+<p>Python script to install Nagios on Debian 9</p>
+<h2>Prepare your setup</h2>
+<p>To use this script you need to install Python3 and pip3.
+* On debian/ubuntu : <code>apt install python3</code>
+* On centos : <code>yum install python3</code>
+* On Windows : install the last 3.X version on : https://www.python.org/downloads/</p>
+<p>In the installation, be carrefull to select the option <code>Add Python to environnment variables</code></p>
+<p><img alt="Python_Install" src="https://i.imgur.com/TMMV3nE.png"></p>
+<p>When that was done, you have to edit the script <code>variables.py</code> with your own informations.</p>
+<h2>Run the script</h2>
+<p><code>python3 install.py</code></p>
+<p><code>python3 update.py</code></p>
+<h2>Contributing</h2>
+<ol>
+<li>
+<p>Fork it</p>
+</li>
+<li>
+<p>Create your feature branch (<code>git checkout -b my-new-feature</code>)</p>
+</li>
+<li>
+<p>Commit your changes (<code>git commit -am 'Add some feature'</code>)</p>
+</li>
+<li>
+<p>Push to the branch (<code>git push origin my-new-feature</code>)</p>
+</li>
+<li>
+<p>Create new Pull Request</p>
+</li>
+</ol>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://thoomson.github.io/tag/python.html">python</a>
+      <a href="https://thoomson.github.io/tag/script.html">script</a>
+      <a href="https://thoomson.github.io/tag/monitoring.html">monitoring</a>
+      <a href="https://thoomson.github.io/tag/nagios.html">nagios</a>
+      <a href="https://thoomson.github.io/tag/debian.html">debian</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>

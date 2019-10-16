@@ -142,4 +142,34 @@ To do that :&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Create new Pull Request&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="python"></category><category term="wordpress"></category><category term="aws"></category><category term="ec2"></category><category term="script"></category><category term="debian"></category></entry></feed>
+&lt;/ol&gt;</content><category term="python"></category><category term="wordpress"></category><category term="aws"></category><category term="ec2"></category><category term="script"></category><category term="debian"></category></entry><entry><title>Script to install and update Nagios</title><link href="https://thoomson.github.io/script-to-install-and-update-nagios.html" rel="alternate"></link><published>2018-11-30T20:00:00+01:00</published><updated>2018-11-30T20:30:00+01:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2018-11-30:/script-to-install-and-update-nagios.html</id><summary type="html">&lt;p&gt;My Python script to install or update Nagios on Debian 9&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/InstallUpdateNagios&lt;/p&gt;
+&lt;p&gt;Python script to install Nagios on Debian 9&lt;/p&gt;
+&lt;h2&gt;Prepare your setup&lt;/h2&gt;
+&lt;p&gt;To use this script you need to install Python3 and pip3.
+* On debian/ubuntu : &lt;code&gt;apt install python3&lt;/code&gt;
+* On centos : &lt;code&gt;yum install python3&lt;/code&gt;
+* On Windows : install the last 3.X version on : https://www.python.org/downloads/&lt;/p&gt;
+&lt;p&gt;In the installation, be carrefull to select the option &lt;code&gt;Add Python to environnment variables&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Python_Install" src="https://i.imgur.com/TMMV3nE.png"&gt;&lt;/p&gt;
+&lt;p&gt;When that was done, you have to edit the script &lt;code&gt;variables.py&lt;/code&gt; with your own informations.&lt;/p&gt;
+&lt;h2&gt;Run the script&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;python3 install.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python3 update.py&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Contributing&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Fork it&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commit your changes (&lt;code&gt;git commit -am 'Add some feature'&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create new Pull Request&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="python"></category><category term="script"></category><category term="monitoring"></category><category term="nagios"></category><category term="debian"></category></entry></feed>
