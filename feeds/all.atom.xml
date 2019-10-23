@@ -36,7 +36,7 @@
 &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am 'Add some feature'&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Create new Pull Request&lt;/li&gt;
-&lt;/ol&gt;</content><category term="vagrant"></category><category term="docker"></category><category term="debian"></category></entry><entry><title>My Docker Starter</title><link href="https://thoomson.github.io/my-docker-starter.html" rel="alternate"></link><published>2019-10-16T10:00:00+02:00</published><updated>2019-10-16T10:00:00+02:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2019-10-16:/my-docker-starter.html</id><summary type="html">&lt;p&gt;My docker starter from Github&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/MyDockerStarter&lt;/p&gt;
+&lt;/ol&gt;</content><category term="DevOps"></category><category term="vagrant"></category><category term="docker"></category><category term="debian"></category></entry><entry><title>My Docker Starter</title><link href="https://thoomson.github.io/my-docker-starter.html" rel="alternate"></link><published>2019-10-16T10:00:00+02:00</published><updated>2019-10-16T10:00:00+02:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2019-10-16:/my-docker-starter.html</id><summary type="html">&lt;p&gt;My docker starter from Github&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/MyDockerStarter&lt;/p&gt;
 &lt;p&gt;Just a Dockerfile to deploy an nginx container.&lt;/p&gt;
 &lt;p&gt;This Dockerfile can be used in combination with my Vagrantfile : https://github.com/thoomson/MyVagrantEnv&lt;/p&gt;
 &lt;h2&gt;How to use it&lt;/h2&gt;
@@ -74,7 +74,7 @@
 &lt;li&gt;
 &lt;p&gt;Create new Pull Request&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="docker"></category><category term="dockerfile"></category><category term="nginx"></category><category term="ssh"></category><category term="openssh"></category></entry><entry><title>Automate WordPress install in AWS</title><link href="https://thoomson.github.io/automate-wordpress-install-in-aws.html" rel="alternate"></link><published>2019-09-10T15:00:00+02:00</published><updated>2019-09-10T15:00:00+02:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2019-09-10:/automate-wordpress-install-in-aws.html</id><summary type="html">&lt;p&gt;My Python script to automatically install Wordpress in an AWS EC2 instance from Github&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/AutoInstallWPinAWS&lt;/p&gt;
+&lt;/ol&gt;</content><category term="DevOps"></category><category term="docker"></category><category term="dockerfile"></category><category term="nginx"></category><category term="ssh"></category><category term="openssh"></category></entry><entry><title>Automate WordPress install in AWS</title><link href="https://thoomson.github.io/automate-wordpress-install-in-aws.html" rel="alternate"></link><published>2019-09-10T15:00:00+02:00</published><updated>2019-09-10T15:00:00+02:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2019-09-10:/automate-wordpress-install-in-aws.html</id><summary type="html">&lt;p&gt;My Python script to automatically install Wordpress in an AWS EC2 instance from Github&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/AutoInstallWPinAWS&lt;/p&gt;
 &lt;p&gt;Python script to automatically install Wordpress in an AWS EC2 instance
 This script has only be tested on &lt;strong&gt;Debian 9&lt;/strong&gt; and &lt;strong&gt;Windows 10&lt;/strong&gt; ! Be carrefull when use it on others systems.&lt;/p&gt;
 &lt;h2&gt;Prepare your setup&lt;/h2&gt;
@@ -142,7 +142,7 @@ To do that :&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Create new Pull Request&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="python"></category><category term="wordpress"></category><category term="aws"></category><category term="ec2"></category><category term="script"></category><category term="debian"></category></entry><entry><title>Script to install and update Nagios</title><link href="https://thoomson.github.io/script-to-install-and-update-nagios.html" rel="alternate"></link><published>2018-11-30T20:00:00+01:00</published><updated>2018-11-30T21:00:00+01:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2018-11-30:/script-to-install-and-update-nagios.html</id><summary type="html">&lt;p&gt;My Python script to install or update Nagios on Debian 9&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/InstallUpdateNagios&lt;/p&gt;
+&lt;/ol&gt;</content><category term="DevOps"></category><category term="python"></category><category term="wordpress"></category><category term="aws"></category><category term="ec2"></category><category term="script"></category><category term="debian"></category></entry><entry><title>Script to install and update Nagios</title><link href="https://thoomson.github.io/script-to-install-and-update-nagios.html" rel="alternate"></link><published>2018-11-30T20:00:00+01:00</published><updated>2018-11-30T21:30:00+01:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2018-11-30:/script-to-install-and-update-nagios.html</id><summary type="html">&lt;p&gt;My Python script to install or update Nagios on Debian 9&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/InstallUpdateNagios&lt;/p&gt;
 &lt;p&gt;Python script to install Nagios on Debian 9&lt;/p&gt;
 &lt;h2&gt;Prepare your setup&lt;/h2&gt;
 &lt;p&gt;To use this script you need to install Python3 and pip3.
@@ -172,4 +172,4 @@ To do that :&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Create new Pull Request&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="python"></category><category term="script"></category><category term="monitoring"></category><category term="nagios"></category><category term="debian"></category></entry></feed>
+&lt;/ol&gt;</content><category term="DevOps"></category><category term="python"></category><category term="script"></category><category term="monitoring"></category><category term="nagios"></category><category term="debian"></category></entry></feed>
