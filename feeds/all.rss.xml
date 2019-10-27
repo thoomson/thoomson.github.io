@@ -2,6 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Thoomson's blog - DevOps</title><link href="https://thoomson.github.io/" rel="alternate"></link><link href="https://thoomson.github.io/feeds/all.rss.xml" rel="self"></link><id>https://thoomson.github.io/</id><updated>2019-10-16T10:30:00+02:00</updated><subtitle>DevOps</subtitle><entry><title>My Vagrant Env</title><link href="https://thoomson.github.io/my-vagrant-env.html" rel="alternate"></link><published>2019-10-16T10:30:00+02:00</published><updated>2019-10-16T10:30:00+02:00</updated><author><name>thoomson</name></author><id>tag:thoomson.github.io,2019-10-16:/my-vagrant-env.html</id><summary type="html">&lt;p&gt;My vagrant starter from Github&lt;/p&gt;</summary><content type="html">&lt;p&gt;Files and last updates : https://github.com/thoomson/MyVagrantEnv&lt;/p&gt;
 &lt;p&gt;This is just a vagrantfile to deploy an environment based on Debian 10 (Buster).&lt;/p&gt;
 &lt;p&gt;This vagrantfile also install docker and ansible with their latest version.&lt;/p&gt;
+&lt;p&gt;Test&lt;/p&gt;
 &lt;h2&gt;How to use it&lt;/h2&gt;
 &lt;p&gt;You can use this vagrantfile with my Dockerfile that create a container with nginx. (You can find it here : https://github.com/thoomson/MyDockerStarter)&lt;/p&gt;
 &lt;ol&gt;
